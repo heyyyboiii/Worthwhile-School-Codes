@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale.0">
+    <title>Ionize</title>
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="Inonize.png" width="100px"></div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="customers.html">Customers</a></li>
+            <li><a href="order.html">Orders</a></li>
+            <li><a href="stockin.html">Stock-In</a></li>
+            <li><a href="index.html"><img src="shop.png" width="30px"></a></li>
+        </ul>
+        <input type="text" placeholder="Search">
+    </nav>
+
+    <div class="stockin">    
+    <form id="login" method="get" action="login.php">    
+        <label><b>Product ID     
+        </b>    
+        </label>    
+        <input type="text" name="prodid" id="prodid" placeholder="Product ID">    
+        <br><br>    
+        <label><b>Product Category    
+        </b>    
+        </label>    
+        <input type="text" name="prodcat" id="prodcat" placeholder="Product Category">    
+        <br><br>
+        <label><b>Product Name     
+        </b>    
+        </label>    
+        <input type="text" name="prodname" id="prodname" placeholder="Product Name">    
+        <br><br>
+        <label><b>Product Price     
+        </b>    
+        </label>    
+        <input type="text" name="prodprice" id="prodprice" placeholder="Product Price">    
+        <br><br>     
+        <label><b>Product Quantity 
+        </b>    
+        </label>    
+        <input type="text" name="prodquant" id="prodquant" placeholder="Product Quantity">    
+        <br><br> 
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile">  
+        <br><br>           
+        <input type="button" name="log" id="log" value="Submit">       
+        <br><br>      
+    </form>     
+    </div>
+    
+    <table class="tablesform">
+        <tr class="flashy">
+            <td>Product ID</td>
+            <td>Product Category</td>
+            <td>Product Name</td>
+            <td>Product Price</td>
+            <td>Product Quantity</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Motherboard</td>
+            <td>NiceMotherboard</td>
+            <td>$10000</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Motherboard</td>
+            <td>UglyMotherboard</td>
+            <td>$1</td>
+            <td>10</td>
+        </tr>
+    </table>
+      
+</body>
+</html>

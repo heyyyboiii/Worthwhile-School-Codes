@@ -1,0 +1,342 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 2000px;
+    width: 2000px;
+}
+
+.navbar {
+    padding: 20px 5%;
+    display: flexbox;
+    text-justify: distribute;
+    flex-align: center;
+    position:fixed;
+    z-index: 999;
+    background-color: #fb5855;
+    box-shadow: 0 0 14px #fa2a27;
+    width: 100%;
+    top: 0%;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a {
+    display:block;
+    margin-left: 20px;
+    color: black;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar .menu li .active {
+    border-bottom: 4px solid gold;
+}
+.navbar .menu li a i {
+    color: gold;
+}
+.navbar .menu li a:hover {
+    border-bottom: 4px solid gold;
+}
+.navbar input[type=text] {
+    float: none;
+    width: 500px;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 20px;
+    font-size: 17px;
+}
+.content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flexbox;
+    flex-direction:column;
+    flex-align: center;
+    position:absolute;
+    bottom: 640px;
+} 
+.content h1 {
+    font-size: 40px;
+}
+.content p {
+ font-size: 20px;
+ margin-top: 20px;
+}
+.content button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    background: red;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background:repeating-radial-gradient(white, red);
+}
+.table {
+    position: absolute;
+    border: solid black 1px;
+    border-radius:10px;
+    border-spacing:5px;
+    font-size: 40px;
+    right:700px;
+    left: 700px;
+    bottom: 400px;
+    background:repeating-radial-gradient(white, red);
+}
+.product {
+    position: absolute;
+    border: solid black 5px;
+    border-radius:10px;
+    border-spacing:5px;
+    font-size: 40px;
+    right:700px;
+    left: 700px;
+    bottom: 100px;
+    background:repeating-radial-gradient(white, red);   
+}
+.centerlng {
+    text-align:center;
+}
+.rowprods {
+    font-size: 20px;
+    text-align: center;
+}
+.prochead {
+    position: absolute;
+    right:700px;
+    left: 700px;
+    bottom: 750px;   
+    text-align: center;
+    font-size: 40px;
+}
+.sec {
+    padding: 10px 5%;
+    position: absolute;
+    bottom: 30%;
+    top: 30%;
+}
+.shoptable {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 250px;
+    right: 250px;
+}
+.try {
+    border: solid black 2px;
+    border-radius: 9px;
+    border-spacing: 10px;
+}
+.procproducts .card {
+    width: 310px;
+    background: white;
+    box-shadow: 0 10px 20px rgb(128, 128, 128);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.procproducts .card img {
+    height: 250px;
+    width: 100%;
+}
+.procproducts .card .desc {
+    padding: 5px 20px;
+    opacity: 0,8;
+}
+.procproducts. card .title {
+    font-weight: 900;
+    font-size: 20px;
+    color: red;
+    padding: 0 20px;
+}
+
+.procproducts .card .box {
+    display: inline-flexbox;
+    text-justify:distribute;
+    flex-align: center;
+    padding:20px;
+}
+.procproducts .card .box .price {
+    color: black;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.procproducts .card .box .btn {
+    font-size:13px;
+    color:gold;
+    padding:10px 18px;
+    font-weight:900;
+    border: 1px solid black;    
+    border-radius:20px;
+}
+.procproducts .card .box .btn:hover {
+    cursor pointer;
+    background-color: red;
+    color: white;
+}
+
+
+.logdesc {
+    width: 300px;
+    font-size: 35px;
+    position:absolute;
+    right:1000px;
+    left: 1000px;
+    top: 220px;
+}
+.piclog {
+    height: 100px;
+    width: 100px;
+    position:absolute;
+    right:500px;
+    left: 500px;
+    top: 200px;
+
+}
+.login{
+    vertical-align: central;
+    width: 340px;  
+    overflow: hidden;  
+    position:absolute;
+    padding: 80px;  
+    background: red;  
+    bottom: 400px;
+    background:repeating-radial-gradient(white, red);
+}   
+label{  
+    color: black;  
+    font-size: 20px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#Password1{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}
+#log{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 20px;  
+}  
+
+.stockin{
+    vertical-align: central;
+    width: 340px;  
+    overflow: hidden;  
+    position:absolute;
+    padding: 80px;  
+    background: red;  
+    bottom: 220px;
+    background:repeating-radial-gradient(white, red);
+}   
+label{  
+    color: black;  
+    font-size: 20px;  
+}  
+#prodid{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#prodcat{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#prodname{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;      
+}
+#prodprice{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;      
+}
+#prodquant{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;      
+}
+#log{  
+    width: 300px;  
+    height: 40px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black;  
+}
+.tablesform {
+    position: absolute;
+    border: solid black 1px;
+    border-radius:10px;
+    border-spacing:5px;
+    font-size: 30px;
+    right:700px;
+    left: 700px;
+    bottom: 700px;
+}
+.tablesform tr:hover{
+    background-color: pink;
+}
+
+.tablesform1 {
+    position: absolute;
+    border: solid black 1px;
+    border-radius:10px;
+    border-spacing:5px;
+    font-size: 30px;
+    right:700px;
+    left: 700px;
+    bottom: 700px;
+}
+.tablesform1 tr:hover{
+    background-color: pink;
+}
+
