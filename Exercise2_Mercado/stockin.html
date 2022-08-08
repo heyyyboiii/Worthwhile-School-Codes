@@ -20,39 +20,42 @@
         <input type="text" placeholder="Search">
     </nav>
 
-    <div class="stockin">    
-    <form id="login" method="get" action="login.php">    
-        <label><b>Product ID     
-        </b>    
-        </label>    
-        <input type="text" name="prodid" id="prodid" placeholder="Product ID">    
-        <br><br>    
-        <label><b>Product Category    
-        </b>    
-        </label>    
-        <input type="text" name="prodcat" id="prodcat" placeholder="Product Category">    
-        <br><br>
-        <label><b>Product Name     
-        </b>    
-        </label>    
-        <input type="text" name="prodname" id="prodname" placeholder="Product Name">    
-        <br><br>
-        <label><b>Product Price     
-        </b>    
-        </label>    
-        <input type="text" name="prodprice" id="prodprice" placeholder="Product Price">    
-        <br><br>     
-        <label><b>Product Quantity 
-        </b>    
-        </label>    
-        <input type="text" name="prodquant" id="prodquant" placeholder="Product Quantity">    
+    <div class="center">
+      <h1>Stock-In</h1>
+      <form method="post">
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Product ID</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Product Category</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Product Name</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Product Price</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label>Product Quantity</label>
+        </div>
         <br><br> 
         <label for="myfile">Select a file:</label>
-        <input type="file" id="myfile" name="myfile">  
-        <br><br>           
-        <input type="button" name="log" id="log" value="Submit">       
-        <br><br>      
-    </form>     
+        <input type="file" id="myfile" name="myfile">
+        <br><br>
+        <input type="submit" value="Submit">
+        <br><br><br><br>
+
+      </form>
     </div>
     
     <table class="tablesform">
