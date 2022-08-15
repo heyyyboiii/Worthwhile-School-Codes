@@ -10,15 +10,13 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author mercy
  */
-public class studentsform extends javax.swing.JFrame {
-        teachersform tform = new teachersform();
-        subjectsform subform = new subjectsform();
+public class teachersform extends javax.swing.JFrame {
         String filterString = ";";
         String stID;
     /**
-     * Creates new form studentsform
+     * Creates new form teachersform
      */
-    public studentsform() {
+    public teachersform() {
         initComponents();
     }
 
@@ -32,17 +30,17 @@ public class studentsform extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        studID = new javax.swing.JTextField();
+        teachID = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        studName = new javax.swing.JTextField();
+        teachName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        studAddress = new javax.swing.JTextField();
+        teachDept = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        studCourse = new javax.swing.JTextField();
+        teachAddress = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        studGender = new javax.swing.JTextField();
+        teachContact = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        studYearLvl = new javax.swing.JTextField();
+        teachStatust = new javax.swing.JTextField();
         savebut = new javax.swing.JButton();
         updatebut = new javax.swing.JButton();
         deletebut = new javax.swing.JButton();
@@ -92,45 +90,45 @@ public class studentsform extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Enter Student ID:");
+        jLabel1.setText("Enter Teachers ID:");
 
-        studID.addActionListener(new java.awt.event.ActionListener() {
+        teachID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studIDActionPerformed(evt);
+                teachIDActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Enter Student Name:");
+        jLabel2.setText("Enter Teachers Name:");
 
-        studName.addActionListener(new java.awt.event.ActionListener() {
+        teachName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studNameActionPerformed(evt);
+                teachNameActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Enter Student Address:");
+        jLabel3.setText("Enter Teachers Department:");
 
-        studAddress.addActionListener(new java.awt.event.ActionListener() {
+        teachDept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studAddressActionPerformed(evt);
+                teachDeptActionPerformed(evt);
             }
         });
 
-        jLabel4.setText("Enter Student Course:");
+        jLabel4.setText("Enter Teachers Address:");
 
-        jLabel5.setText("Enter Student Gender:");
+        jLabel5.setText("Enter Teachers Contact:");
 
-        studGender.addActionListener(new java.awt.event.ActionListener() {
+        teachContact.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studGenderActionPerformed(evt);
+                teachContactActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Enter Year Level:");
+        jLabel6.setText("Enter Teachers Status:");
 
-        studYearLvl.addActionListener(new java.awt.event.ActionListener() {
+        teachStatust.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                studYearLvlActionPerformed(evt);
+                teachStatustActionPerformed(evt);
             }
         });
 
@@ -157,7 +155,7 @@ public class studentsform extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Filter"));
 
-        jLabel7.setText("Student ID");
+        jLabel7.setText("Teacher ID");
 
         logicOP1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "=", "<", ">", "<=", ">=", "<>" }));
         logicOP1.addActionListener(new java.awt.event.ActionListener() {
@@ -179,7 +177,7 @@ public class studentsform extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Student Name");
+        jLabel8.setText("Teacher Name");
 
         jLabel9.setText("Starts");
 
@@ -202,7 +200,7 @@ public class studentsform extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setText("Student Address");
+        jLabel11.setText("Teacher Address");
 
         jLabel12.setText("Starts");
 
@@ -214,6 +212,11 @@ public class studentsform extends javax.swing.JFrame {
 
         jLabel13.setText("Ends");
 
+        eaddrFilter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eaddrFilterActionPerformed(evt);
+            }
+        });
         eaddrFilter.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 eaddrFilterKeyReleased(evt);
@@ -234,13 +237,8 @@ public class studentsform extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setText("Student Course");
+        jLabel14.setText("Teacher Dept.");
 
-        courseFilter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                courseFilterActionPerformed(evt);
-            }
-        });
         courseFilter.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 courseFilterKeyReleased(evt);
@@ -261,7 +259,7 @@ public class studentsform extends javax.swing.JFrame {
             }
         });
 
-        jLabel15.setText("Student Gender");
+        jLabel15.setText("Teacher Contact");
 
         genderFilter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,7 +272,7 @@ public class studentsform extends javax.swing.JFrame {
             }
         });
 
-        jLabel16.setText("Year Level");
+        jLabel16.setText("Teacher Status");
 
         yearlvlFilter.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -394,7 +392,7 @@ public class studentsform extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Student ID", "Student Name", "Student Address", "Student Course", "Student Gender", "Student Year Level"
+                "Teacher ID", "Teacher Name", "Teacher Department", "Teacher Address", "Teacher Contact", "Teacher Status"
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -431,41 +429,39 @@ public class studentsform extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(studAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(studCourse, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(savebut, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(updatebut, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(deletebut, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
-                                .addGap(41, 41, 41)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(studYearLvl)
-                                    .addComponent(studGender)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
-                                .addGap(50, 50, 50)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(studName, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                                    .addComponent(studID)))
-                            .addComponent(jLabel3))))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(8, 8, 8)
+                        .addComponent(savebut, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(updatebut, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(deletebut, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(49, 49, 49)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(teachName)
+                            .addComponent(teachID)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(teachDept, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel4))
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(teachStatust)
+                            .addComponent(teachContact)
+                            .addComponent(teachAddress, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 844, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 827, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -479,27 +475,27 @@ public class studentsform extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(studID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(teachID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(studName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(teachName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(studAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(teachDept, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
-                            .addComponent(studCourse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(teachAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
-                            .addComponent(studGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(teachContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
-                            .addComponent(studYearLvl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(teachStatust, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(savebut)
@@ -516,90 +512,90 @@ public class studentsform extends javax.swing.JFrame {
         DefaultTableModel tblmodel = (DefaultTableModel) jTable1.getModel();
         tblmodel.setRowCount(0);
         
-        if(!idFilter.getText().equals("")){
-            filterString = " WHERE studID " + logicOP1.getSelectedItem() + idFilter.getText();
+    if(!idFilter.getText().equals("")){
+        filterString = " WHERE teachID " + logicOP1.getSelectedItem() + idFilter.getText();
         }
         if(!snameFilter.getText().equals("")){
             if(idFilter.getText().equals("")){
-                filterString = String.format("WHERE studName like '%s%%'", snameFilter.getText());
+                filterString = String.format("WHERE teachName like '%s%%'", snameFilter.getText());
             }else if(!enameFilter.getText().equals("")){
-                filterString += String.format(" %s studname like '%s%%'", choose1.getSelectedItem(), snameFilter.getText());
+                filterString += String.format(" %s teachName like '%s%%'", choose1.getSelectedItem(), snameFilter.getText());
             }else{
-                filterString += String.format(" %s studname like '%s%%'", choose1.getSelectedItem(), snameFilter.getText());
+                filterString += String.format(" %s teachName like '%s%%'", choose1.getSelectedItem(), snameFilter.getText());
             }
-            //filterString = " WHERE studName like '" + snameFilter.getText() + "%' ";
+            //filterString = " WHERE teachName like '" + snameFilter.getText() + "%' ";
         }
         if(!enameFilter.getText().equals("")){
             if(idFilter.getText().equals("") && snameFilter.getText().equals("")){
-                filterString = String.format("WHERE studName like '%%%s'", enameFilter.getText());
+                filterString = String.format("WHERE teachName like '%%%s'", enameFilter.getText());
             }else if(snameFilter.getText().equals("")){
-                filterString += String.format(" %s studName like '%%%s'", choose1.getSelectedItem(), enameFilter.getText());
+                filterString += String.format(" %s teachName like '%%%s'", choose1.getSelectedItem(), enameFilter.getText());
             }else if(!snameFilter.getText().equals("") && idFilter.getText().equals("")){
-                filterString += String.format(" AND studName like '$$$s'", enameFilter.getText());
+                filterString += String.format(" AND teachName like '$$$s'", enameFilter.getText());
             }else{
-                filterString += String.format(" AND studName like '$$$s'", enameFilter.getText());
+                filterString += String.format(" AND teachName like '$$$s'", enameFilter.getText());
             }
-            //filterString = " WHERE studName like '%" + enameFilter.getText() + "' ";
+            //filterString = " WHERE teachName like '%" + enameFilter.getText() + "' ";
         }
         if(!saddrFilter.getText().equals("")){
             if(idFilter.getText().equals("") && snameFilter.getText().equals("") && enameFilter.getText().equals("")){
-                filterString = String.format("WHERE studAddress like '%s%%'", saddrFilter.getText());
+                filterString = String.format("WHERE teachAddress like '%s%%'", saddrFilter.getText());
             }else if(!eaddrFilter.getText().equals("")){
-                filterString += String.format(" %s studAddress like '%s%%'", choose2.getSelectedItem(), saddrFilter.getText());
+                filterString += String.format(" %s teachAddress like '%s%%'", choose2.getSelectedItem(), saddrFilter.getText());
             }else{
-                filterString += String.format(" %s studAddress like '%s%%'", choose2.getSelectedItem(), saddrFilter.getText());
+                filterString += String.format(" %s teachAddress like '%s%%'", choose2.getSelectedItem(), saddrFilter.getText());
             }
-            // = " WHERE studAddress like '" + saddrFilter.getText() + "%' ";
+            // = " WHERE teachAddress like '" + saddrFilter.getText() + "%' ";
         }
         if(!eaddrFilter.getText().equals("")){
             if(idFilter.getText().equals("") && snameFilter.getText().equals("") && enameFilter.getText().equals("") && saddrFilter.getText().equals("")){
-                filterString = String.format("WHERE studAddress like '%%%s'", eaddrFilter.getText());
+                filterString = String.format("WHERE teachAddress like '%%%s'", eaddrFilter.getText());
             }else if(saddrFilter.getText().equals("")){
-                filterString += String.format(" %s studAddress like '%%%s'", choose2.getSelectedItem(), eaddrFilter.getText());
+                filterString += String.format(" %s teachAddress like '%%%s'", choose2.getSelectedItem(), eaddrFilter.getText());
             }else if(!saddrFilter.getText().equals("") && idFilter.getText().equals("") && snameFilter.getText().equals("") && enameFilter.getText().equals("")){
-                filterString += String.format(" AND studAddress like '%%%s'", eaddrFilter.getText());
+                filterString += String.format(" AND teachAddress like '%%%s'", eaddrFilter.getText());
             }else{
-                filterString += String.format(" AND studAddress like '%%%s'", eaddrFilter.getText());
+                filterString += String.format(" AND teachAddress like '%%%s'", eaddrFilter.getText());
             }
-            //filterString = " WHERE studAddress like '%" + eaddrFilter.getText() + "' ";
+            //filterString = " WHERE teachAddress like '%" + eaddrFilter.getText() + "' ";
         }
         if(!courseFilter.getText().equals("")){
             if(idFilter.getText().equals("") && snameFilter.getText().equals("") && enameFilter.getText().equals("") && saddrFilter.getText().equals("") && eaddrFilter.getText().equals("")){
-                filterString = String.format("WHERE studCourse like '%s%%'", courseFilter.getText());
+                filterString = String.format("WHERE teachDept like '%s%%'", courseFilter.getText());
             }else{
-                filterString += String.format(" %s studCourse like '%s%%'", choose3.getSelectedItem(), courseFilter.getText());
+                filterString += String.format(" %s teachDept like '%s%%'", choose3.getSelectedItem(), courseFilter.getText());
             }
-            //filterString = " WHERE studCourse='" + courseFilter.getText() + "' ";
+            //filterString = " WHERE teachDept='" + courseFilter.getText() + "' ";
         }
         if(!genderFilter.getText().equals("")){
             if(idFilter.getText().equals("") && snameFilter.getText().equals("") && enameFilter.getText().equals("") && saddrFilter.getText().equals("") && eaddrFilter.getText().equals("") && courseFilter.getText().equals("")){
-                filterString = String.format("WHERE studGender like '%s%%'", genderFilter.getText());
+                filterString = String.format("WHERE teachContact like '%s%%'", genderFilter.getText());
             }else{
-                filterString += String.format(" %s studGender like '%s%%'", choose4.getSelectedItem(), genderFilter.getText());
+                filterString += String.format(" %s teachContact like '%s%%'", choose4.getSelectedItem(), genderFilter.getText());
             }
-            //filterString = " WHERE studGender='" + genderFilter.getText() + "' ";
+            //filterString = " WHERE teachContact='" + genderFilter.getText() + "' ";
         }
         if(!yearlvlFilter.getText().equals("")){
             if(idFilter.getText().equals("") && snameFilter.getText().equals("") && enameFilter.getText().equals("") && saddrFilter.getText().equals("") && eaddrFilter.getText().equals("") && courseFilter.getText().equals("") && genderFilter.getText().equals("")){
-                filterString = String.format("WHERE studYearLvl like '%s%%'", yearlvlFilter.getText());
+                filterString = String.format("WHERE teachStatust like '%s%%'", yearlvlFilter.getText());
             }else{
-                filterString += String.format(" %s studYearLvl like '%s%%'", choose5.getSelectedItem(), yearlvlFilter.getText());
+                filterString += String.format(" %s teachStatust like '%s%%'", choose5.getSelectedItem(), yearlvlFilter.getText());
             }
-            //filterString = " WHERE studYearLvl='" + yearlvlFilter.getText() + "' ";
+            //filterString = " WHERE teachStatust='" + yearlvlFilter.getText() + "' ";
         }
          
         DBConnect connector = new DBConnect();
         
         try{
-            String query = "SELECT * FROM students" + filterString;
+            String query = "SELECT * FROM teachers" + filterString;
             connector.rs = connector.st.executeQuery(query);
                 while(connector.rs.next()){
-                    String id = connector.rs.getString("studID");
-                    String name = connector.rs.getString("studName");
-                    String address = connector.rs.getString("studAddress");
-                    String course = connector.rs.getString("studCourse");
-                    String gender = connector.rs.getString("studGender");
-                    String year = connector.rs.getString("studYearLvl");
+                    String id = connector.rs.getString("teachID");
+                    String name = connector.rs.getString("teachName");
+                    String address = connector.rs.getString("teachDept");
+                    String course = connector.rs.getString("teachAddress");
+                    String gender = connector.rs.getString("teachContact");
+                    String year = connector.rs.getString("teachStatust");
                     String[] item = {id,name,address,course,gender,year};
                     tblmodel.addRow(item);
                 }
@@ -608,55 +604,54 @@ public class studentsform extends javax.swing.JFrame {
         }
     }
     
-    private void studNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studNameActionPerformed
+    private void teachNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teachNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_studNameActionPerformed
+    }//GEN-LAST:event_teachNameActionPerformed
 
-    private void studAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studAddressActionPerformed
+    private void teachDeptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teachDeptActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_studAddressActionPerformed
+    }//GEN-LAST:event_teachDeptActionPerformed
 
-    private void studGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studGenderActionPerformed
+    private void teachContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teachContactActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_studGenderActionPerformed
+    }//GEN-LAST:event_teachContactActionPerformed
 
     private void deletebutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletebutActionPerformed
-        students stud = new students();
-        stud.DeleteStudent(filterString);
+        teachers teach = new teachers();
+        teach.DeleteTeachers(filterString);
         ShowStudRec();
     }//GEN-LAST:event_deletebutActionPerformed
 
     private void savebutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savebutActionPerformed
-        students stud = new students();
-        stud.AddStudents(Integer.parseInt(studID.getText()), studName.getText(), studAddress.getText(), studCourse.getText(), studGender.getText(), studYearLvl.getText());
+        teachers teach = new teachers();
+        teach.AddTeachers(Integer.parseInt(teachID.getText()), teachName.getText(), teachDept.getText(), teachAddress.getText(), teachContact.getText(), teachStatust.getText());
         ShowStudRec();
     }//GEN-LAST:event_savebutActionPerformed
 
     private void updatebutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatebutActionPerformed
-        students stud = new students();
-        stud.UpdateStudents(Integer.parseInt(studID.getText()), studName.getText(), studAddress.getText(), studCourse.getText(), studGender.getText(), studYearLvl.getText());
+        teachers teach = new teachers();
+        teach.UpdateTeachers(Integer.parseInt(teachID.getText()), teachName.getText(), teachDept.getText(), teachAddress.getText(), teachContact.getText(), teachStatust.getText());
         ShowStudRec();
     }//GEN-LAST:event_updatebutActionPerformed
 
-    private void studIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studIDActionPerformed
+    private void teachIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teachIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_studIDActionPerformed
+    }//GEN-LAST:event_teachIDActionPerformed
 
-    private void studYearLvlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studYearLvlActionPerformed
+    private void teachStatustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teachStatustActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_studYearLvlActionPerformed
+    }//GEN-LAST:event_teachStatustActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        tform.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        subform.setVisible(true);
+
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
-        tform.setVisible(false);
-        subform.setVisible(false);
+
     }//GEN-LAST:event_formWindowGainedFocus
 
     private void logicOP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logicOP1ActionPerformed
@@ -732,26 +727,26 @@ public class studentsform extends javax.swing.JFrame {
         
         int[] selectRow = jTable1.getSelectedRows();
         stID = (String) jTable1.getValueAt(selectRow[0],0);
-        studID.setText(stID);
+        teachID.setText(stID);
         name = (String) jTable1.getValueAt(selectRow[0],1);
-        studName.setText(name);
+        teachName.setText(name);
         address = (String) jTable1.getValueAt(selectRow[0],2);
-        studAddress.setText(address);
+        teachDept.setText(address);
         course = (String) jTable1.getValueAt(selectRow[0],3);
-        studCourse.setText(course);
+        teachAddress.setText(course);
         gender = (String) jTable1.getValueAt(selectRow[0],4);
-        studGender.setText(gender);
+        teachContact.setText(gender);
         year = (String) jTable1.getValueAt(selectRow[0],5);
-        studYearLvl.setText(year);
+        teachStatust.setText(year);
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void genderFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderFilterActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_genderFilterActionPerformed
 
-    private void courseFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_courseFilterActionPerformed
+    private void eaddrFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eaddrFilterActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_courseFilterActionPerformed
+    }//GEN-LAST:event_eaddrFilterActionPerformed
 
     /**
      * @param args the command line arguments
@@ -770,20 +765,21 @@ public class studentsform extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(studentsform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(teachersform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(studentsform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(teachersform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(studentsform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(teachersform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(studentsform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(teachersform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new studentsform().setVisible(true);
+                new teachersform().setVisible(true);
             }
         });
     }
@@ -827,12 +823,12 @@ public class studentsform extends javax.swing.JFrame {
     private javax.swing.JTextField saddrFilter;
     private javax.swing.JButton savebut;
     private javax.swing.JTextField snameFilter;
-    private javax.swing.JTextField studAddress;
-    private javax.swing.JTextField studCourse;
-    private javax.swing.JTextField studGender;
-    private javax.swing.JTextField studID;
-    private javax.swing.JTextField studName;
-    private javax.swing.JTextField studYearLvl;
+    private javax.swing.JTextField teachAddress;
+    private javax.swing.JTextField teachContact;
+    private javax.swing.JTextField teachDept;
+    private javax.swing.JTextField teachID;
+    private javax.swing.JTextField teachName;
+    private javax.swing.JTextField teachStatust;
     private javax.swing.JButton updatebut;
     private javax.swing.JTextField yearlvlFilter;
     // End of variables declaration//GEN-END:variables

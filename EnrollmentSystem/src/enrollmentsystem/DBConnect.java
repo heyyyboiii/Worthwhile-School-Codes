@@ -12,6 +12,7 @@ public class DBConnect {
     public Connection con;
     public Statement st;
     public ResultSet rs;
+    public PreparedStatement pst;
     
     public DBConnect(){
         try{

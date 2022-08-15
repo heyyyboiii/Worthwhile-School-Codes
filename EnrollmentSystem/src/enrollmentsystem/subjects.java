@@ -8,19 +8,18 @@ package enrollmentsystem;
  *
  * @author mercy
  */
-public class students {
-    int studID;
-    String studName;
-    String studAddress;
-    String studCourse;
-    String studGender;
-    String studYearLvl;
+public class subjects {
+    int subID;
+    String subOde;
+    String subDescription;
+    int subUnits;
+    String subSchedule;
     
     DBConnect connector = new DBConnect();
     
-    public void AddStudents(int id, String name, String address, String course, String gender, String year){
+    public void AddSubjects(int id, String ode, String description, int units, String schedule){
         
-        String query = "INSERT INTO students VALUES('" + id + "', '" + name + "', '" + address + "', '" + course + "', '" + gender + "', '" + year + "')";
+        String query = "INSERT INTO subjects VALUES('" + id + "', '" + ode + "', '" + description + "', '" + units + "', '" + schedule + "')";
         try{
             connector.st.executeUpdate(query);
         }catch(Exception ex){
@@ -29,9 +28,9 @@ public class students {
         }
     }
     
-    public void UpdateStudents(int id, String name, String address, String course, String gender, String year){
+    public void UpdateSubjects(int id, String ode, String description, int units, String schedule){
         
-        String upQuery = "UPDATE students SET studName='"+name+"', studAddress='"+address+"', studCourse='"+course+"', studGender='"+gender+"', studYearLvl='" + year + "' WHERE studID = '"+id+"'";
+        String upQuery = "UPDATE subjects SET subOde='"+ode+"', subDescription='"+description+"', subUnits='"+units+"', subSchedule='"+schedule+"' WHERE subID = '"+id+"'";
         try{
             connector.pst = connector.con.prepareStatement(upQuery);
             connector.pst.execute();
@@ -39,13 +38,12 @@ public class students {
             System.out.println("Failed to Update");
             System.out.println(ex);
         }
-
     }
-    public void DeleteStudent(String delete){
+    public void DeleteSubjects(String delete){
         if(delete.equals(";")){
             delete = "";
         }
-        String delQuery = "DELETE FROM students WHERE studID in (SELECT studID from (SELECT * FROM students " + delete + ") as x)";
+        String delQuery = "DELETE FROM subjects WHERE subID in (SELECT subID from (SELECT * FROM subjects " + delete + ") as x)";
         try{
             connector.st.executeUpdate(delQuery);
         }catch(Exception ex){
@@ -53,5 +51,4 @@ public class students {
             System.out.println(ex);
         }
     }
-    
 }
